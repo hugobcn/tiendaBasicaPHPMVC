@@ -1,0 +1,29 @@
+//var_dump($usuario_id);
+            //die();
+            
+  <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+?>          
+            
+  echo $sql;
+  echo $this->db->error;
+  die();
+  
+  
+<?php
+$link = mysqli_connect("localhost", "my_user", "my_password", "world");
+
+/* Comprueba la conexión */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+if (!mysqli_query($link, "SET a=1")) {
+    printf("Errormessage: %s\n", mysqli_error($link));
+}
+
+/* Cierra la conexión */
+mysqli_close($link);
+?>
